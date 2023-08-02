@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>English to Urdu Translator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .translator-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .translation-section {
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            background-color: #ffffff;
+        }
+
+        .translation-section h3 {
+            margin-bottom: 10px;
+        }
+
+        .translation-section p {
+            white-space: pre-wrap;
+        }
+
+        .powered-by {
+            margin-top: 20px;
+            font-size: 12px;
+            text-align: center;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="translator-container">
+            <h1 class="mb-4 text-center">English to Urdu Translator</h1>
+            <form method="post" action="/translate">
+                <div class="form-group">
+                    <label for="inputText">Enter English Text:</label>
+                    <textarea class="form-control" name="text" id="inputText" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Translate</button>
+            </form>
+            {% if translation %}
+                <div class="mt-4 translation-section">
+                    <h3>Translation:</h3>
+                    <p>{{ translation }}</p>
+                </div>
+            {% endif %}
+        </div>
+        <p class="powered-by">Powered by TensorFlow/Keras Model</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
