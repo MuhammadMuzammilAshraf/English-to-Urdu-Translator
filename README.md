@@ -4,9 +4,7 @@ This repository contains a web application that translates English text to Urdu 
 The project is organized as follows:
 
 app.py: The Flask web application code, including model loading, text preprocessing, and translation functions.
-english_to_urdu_translator_final.h5: The pre-trained TensorFlow/Keras model for translation.
-english_tokenizer.pkl: Pickle file containing the English tokenizer used for encoding input text.
-urdu_tokenizer.pkl: Pickle file containing the Urdu tokenizer used for encoding translated text.
+Translator.ipynb: Jupyter Notebook containing the entire time series analysis pipeline.
 templates/index.html: HTML template for the web app's user interface.
 
 ## Data Analysis and Preprocessing
