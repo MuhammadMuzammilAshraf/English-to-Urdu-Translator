@@ -1,5 +1,5 @@
 # English to Urdu Translator Web App
-This repository contains a web application that translates English text to Urdu using a pre-trained machine learning model. The web app is built using Flask and TensorFlow/Keras for the translation model.
+This repository contains a Python Flask web application that translates English sentences to Urdu using a pre-trained deep learning model. The model is built using TensorFlow/Keras and is trained on a dataset of aligned English and Urdu sentences.
 ## Project Structure
 The project is organized as follows:
 
